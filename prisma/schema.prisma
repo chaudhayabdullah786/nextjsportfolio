@@ -1,0 +1,203 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// =============================================================================
+// AdminUser
+// Maps to: Flask AdminUser (UserMixin, db.Model)
+// =============================================================================
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique @db.VarChar(64)
+  email        String   @unique @db.VarChar(120)
+  passwordHash String   @db.VarChar(256)
+  createdAt    DateTime @default(now())
+
+  @@map("admin_user")
+}
+
+// =============================================================================
+// Project
+// Maps to: Flask Project (db.Model)
+// tech_stack stored as JSON string in SQLite -> stored as String for portability
+// tags stored as comma-separated string
+// =============================================================================
+model Project {
+  id               Int      @id @default(autoincrement())
+  title            String   @db.VarChar(100)
+  description      String   @db.Text
+  shortDescription String?  @db.VarChar(200)
+  imagePath        String?  @db.VarChar(200)
+  category         String   @db.VarChar(50)
+  techStack        String?  @db.Text  // JSON string, e.g. '["Python","Pandas"]'
+  tags             String?  @db.Text  // Comma-separated, e.g. "ml,nlp,python"
+  githubLink       String?  @db.VarChar(200)
+  liveLink         String?  @db.VarChar(200)
+  isFeatured       Boolean  @default(false)
+  orderIndex       Int      @default(0)
+  createdAt        DateTime @default(now())
+
+  @@map("project")
+}
+
+// =============================================================================
+// Skill
+// Maps to: Flask Skill (db.Model)
+// =============================================================================
+model Skill {
+  id         Int      @id @default(autoincrement())
+  name       String   @db.VarChar(100)
+  category   String   @db.VarChar(50)  // e.g. Frontend, Backend, Tools, Languages
+  level      Int                        // 1–100 proficiency
+  orderIndex Int      @default(0)
+  createdAt  DateTime @default(now())
+
+  @@map("skill")
+}
+
+// =============================================================================
+// Experience
+// Maps to: Flask Experience (db.Model)
+// end_date is nullable — null indicates current/ongoing role
+// =============================================================================
+model Experience {
+  id          Int      @id @default(autoincrement())
+  jobTitle    String   @db.VarChar(100)
+  company     String   @db.VarChar(100)
+  location    String?  @db.VarChar(100)
+  startDate   DateTime @db.Date
+  endDate     DateTime? @db.Date        // null = current job
+  description String?  @db.Text
+  isCurrent   Boolean  @default(false)
+  orderIndex  Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@map("experience")
+}
+
+// =============================================================================
+// Certificate
+// Maps to: Flask Certificate (db.Model)
+// image_path / pdf_path reference uploads directory
+// NOTE: recovered files are in uploads/images/ and uploads/pdfs/ not
+// uploads/certificates/; the Next.js app will resolve these via the
+// deterministic path map documented in migration tooling.
+// =============================================================================
+model Certificate {
+  id            Int      @id @default(autoincrement())
+  title         String   @db.VarChar(100)
+  platform      String   @db.VarChar(100)
+  imagePath     String?  @db.VarChar(200)
+  pdfPath       String?  @db.VarChar(200)
+  issueDate     DateTime @db.Date
+  credentialUrl String?  @db.VarChar(200)
+  orderIndex    Int      @default(0)
+  createdAt     DateTime @default(now())
+
+  @@map("certificate")
+}
+
+// =============================================================================
+// BlogPost
+// Maps to: Flask BlogPost (db.Model)
+// slug is unique — used for SEO-friendly URLs (/blog/<slug>)
+// =============================================================================
+model BlogPost {
+  id          Int      @id @default(autoincrement())
+  title       String   @db.VarChar(150)
+  slug        String   @unique @db.VarChar(150)
+  content     String   @db.Text
+  excerpt     String?  @db.VarChar(300)
+  imagePath   String?  @db.VarChar(200)
+  tags        String?  @db.Text  // Comma-separated
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("blog_post")
+}
+
+// =============================================================================
+// Testimonial
+// Maps to: Flask Testimonial (db.Model)
+// =============================================================================
+model Testimonial {
+  id         Int      @id @default(autoincrement())
+  name       String   @db.VarChar(100)
+  role       String?  @db.VarChar(100)
+  company    String?  @db.VarChar(100)
+  message    String   @db.Text
+  rating     Int      @default(5)       // 1–5 stars
+  imagePath  String?  @db.VarChar(200)
+  isFeatured Boolean  @default(false)
+  orderIndex Int      @default(0)
+  createdAt  DateTime @default(now())
+
+  @@map("testimonial")
+}
+
+// =============================================================================
+// ContactMessage
+// Maps to: Flask ContactMessage (db.Model)
+// =============================================================================
+model ContactMessage {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(100)
+  email     String   @db.VarChar(120)
+  subject   String?  @db.VarChar(150)
+  message   String   @db.Text
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@map("contact_message")
+}
+
+// =============================================================================
+// SiteSettings
+// Maps to: Flask SiteSettings (db.Model)
+// key/value store for site-wide configuration (github_url, linkedin_url, etc.)
+// =============================================================================
+model SiteSettings {
+  id          Int      @id @default(autoincrement())
+  key         String   @unique @db.VarChar(50)
+  value       String?  @db.Text
+  description String?  @db.VarChar(200)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("site_settings")
+}
+
+// =============================================================================
+// ClientWork
+// Maps to: Flask ClientWork (db.Model)
+// client_name is private; public_client_label and show_client_name control
+// what is exposed publicly — privacy contract preserved from Flask source.
+// =============================================================================
+model ClientWork {
+  id                Int      @id @default(autoincrement())
+  title             String   @db.VarChar(120)
+  clientName        String?  @db.VarChar(100)    // PRIVATE — never expose publicly
+  publicClientLabel String?  @db.VarChar(100)    // Safe label for public display
+  showClientName    Boolean  @default(false)
+  category          String?  @db.VarChar(80)
+  shortDescription  String?  @db.VarChar(300)
+  thumbnailPath     String?  @db.VarChar(200)
+  videoUrl          String?  @db.VarChar(500)    // External video URL
+  videoPath         String?  @db.VarChar(200)    // Locally hosted video file
+  projectUrl        String?  @db.VarChar(500)
+  orderIndex        Int      @default(0)
+  isActive          Boolean  @default(true)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("client_work")
+}

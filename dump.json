@@ -1,0 +1,191 @@
+{
+  "settings": [
+    {
+      "id": 1,
+      "key": "site_title",
+      "value": "Portfolio",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.700Z",
+      "updatedAt": "2025-08-05T09:03:25.700Z"
+    },
+    {
+      "id": 2,
+      "key": "site_description",
+      "value": "Portfolio",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.758Z",
+      "updatedAt": "2025-08-05T09:03:25.758Z"
+    },
+    {
+      "id": 3,
+      "key": "hero_title",
+      "value": "Hi, I'm Muhammad Abdullah",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.774Z",
+      "updatedAt": "2025-11-05T09:53:39.528Z"
+    },
+    {
+      "id": 4,
+      "key": "hero_subtitle",
+      "value": "I'm a web developer and Data Analyst",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.789Z",
+      "updatedAt": "2025-11-05T09:53:40.001Z"
+    },
+    {
+      "id": 5,
+      "key": "about_text",
+      "value": "<blockquote>\r\n<p>I&rsquo;m a <strong>Full-Stack Web Developer and Data &amp; AI Enthusiast</strong> focused on building responsive, reliable, and scalable web applications that solve real business problems. I work across both frontend and backend development, with hands-on experience in <strong>Python, Flask, PHP, JavaScript, React, MySQL, SQLite, and API integration</strong>.</p>\r\n\r\n<p>I specialize in developing <strong>business websites, custom web applications, content-management systems, admin dashboards, database-driven platforms, and AI-powered features</strong>. From designing clean user interfaces to developing secure backend systems, database structures, authentication, form validation, and deployment, I can handle the complete development workflow.</p>\r\n\r\n<p>My experience includes projects in <strong>education, portfolio management, hospital management, parking systems, agriculture, and online services</strong>. I also have a strong interest in <strong>Data Science, data analysis, automation, prompt engineering, and AI integration</strong>, allowing me to combine traditional software development with modern intelligent solutions.</p>\r\n\r\n<p>I believe good development is more than writing code&mdash;it is about <strong>understanding requirements, creating a smooth user experience, writing maintainable code, and delivering a solution that provides real value</strong>. I&rsquo;m committed to clear communication, attention to detail, and continuous improvement throughout every project.</p>\r\n</blockquote>\r\n\r\n<h3>&nbsp;</h3>\r\n",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.806Z",
+      "updatedAt": "2026-09-08T08:28:36.431Z"
+    },
+    {
+      "id": 6,
+      "key": "contact_email",
+      "value": "chaudhayabdullah786@gmail.com",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.824Z",
+      "updatedAt": "2025-11-05T09:53:40.132Z"
+    },
+    {
+      "id": 7,
+      "key": "github_url",
+      "value": "https://github.com/chaudhayabdullah786/porject-portfolio-abdullah786",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.852Z",
+      "updatedAt": "2025-11-05T09:53:40.261Z"
+    },
+    {
+      "id": 8,
+      "key": "linkedin_url",
+      "value": "www.linkedin.com/in/muhammad-abdullah-65608a248",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.871Z",
+      "updatedAt": "2025-11-05T09:53:40.373Z"
+    },
+    {
+      "id": 9,
+      "key": "twitter_url",
+      "value": "",
+      "description": null,
+      "createdAt": "2025-08-05T09:03:25.891Z",
+      "updatedAt": "2025-08-05T09:03:25.891Z"
+    }
+  ],
+  "certs": [
+    {
+      "id": 1,
+      "title": "Regression Analysis: Simplify Complex Data Relationships",
+      "platform": "Google (Coursera)",
+      "imagePath": "uploads/certificates/images/3a9b236ea71c4331bb8c0a9507e7bb2b.png",
+      "pdfPath": "uploads/certificates/pdfs/c47993d3fc0c49789202a2857b311a6c.pdf",
+      "issueDate": "2026-07-28T00:00:00.000Z",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/QLEKPGYLMJRX",
+      "orderIndex": 2,
+      "createdAt": "2026-07-28T02:20:12.085Z"
+    },
+    {
+      "id": 2,
+      "title": "The Power of Statistics",
+      "platform": "Google (via Coursera)",
+      "imagePath": "uploads/certificates/images/cc3813552dca45f594f6f1cfc3c20c55.png",
+      "pdfPath": "uploads/certificates/pdfs/f7c2487ee024440ab6fcbf27e3c95969.pdf",
+      "issueDate": "2026-07-20T00:00:00.000Z",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/HN8GHHKUA5DI",
+      "orderIndex": 1,
+      "createdAt": "2026-07-28T02:21:22.124Z"
+    },
+    {
+      "id": 3,
+      "title": "Go Beyond the Numbers: Translate Data into Insights",
+      "platform": "Google (Coursera)",
+      "imagePath": "uploads/certificates/images/78e7d53a835b44c4883036587b48a044.png",
+      "pdfPath": "uploads/certificates/pdfs/94e0786b718f4a7b968ed6711a40a646.pdf",
+      "issueDate": "2026-06-10T00:00:00.000Z",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/6RN7QZECIAN0",
+      "orderIndex": 3,
+      "createdAt": "2026-07-28T02:24:32.275Z"
+    },
+    {
+      "id": 4,
+      "title": "Foundations of Data Science",
+      "platform": "Google (Coursera)",
+      "imagePath": "uploads/certificates/images/296c2c6667f14d33a8a7fd17af2c59db.png",
+      "pdfPath": "uploads/certificates/pdfs/02c1101c61ae4dbb9c0e3115a49a2d8a.pdf",
+      "issueDate": "2026-05-03T00:00:00.000Z",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/H08JYK43YFRG",
+      "orderIndex": 4,
+      "createdAt": "2026-07-28T02:26:54.224Z"
+    },
+    {
+      "id": 5,
+      "title": "Accelerate Your Job Search with AI",
+      "platform": "Google (Coursera)",
+      "imagePath": "uploads/certificates/images/f55257df4ac64946bd23104b739f4b03.png",
+      "pdfPath": "uploads/certificates/pdfs/4072970a113f4688b15b007b2dccc5f4.pdf",
+      "issueDate": "2026-05-03T00:00:00.000Z",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/3GLLJR66ZLD1",
+      "orderIndex": 5,
+      "createdAt": "2026-07-28T02:29:46.163Z"
+    },
+    {
+      "id": 6,
+      "title": "BCG – Data Science Job Simulation",
+      "platform": "Forage (BCG X)",
+      "imagePath": "uploads/certificates/images/2ad5ffaa559642fca8e212e1ef7b5e6f.jpg",
+      "pdfPath": null,
+      "issueDate": "2026-04-04T00:00:00.000Z",
+      "credentialUrl": "https://www.theforage.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_69edb779d93aef12e95f5c72_1777297743904_completion_certificate.pdf",
+      "orderIndex": 6,
+      "createdAt": "2026-07-28T02:32:53.185Z"
+    },
+    {
+      "id": 7,
+      "title": "Getting Started with Front-End and Web Development",
+      "platform": "Google (Coursera)",
+      "imagePath": "uploads/certificates/images/3802eb63329248fda63d0444b8bbe3e7.png",
+      "pdfPath": "uploads/certificates/pdfs/c2a91aff7cf449728c0957ace1fc95a5.pdf",
+      "issueDate": "2025-06-06T00:00:00.000Z",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/records/ET2IAP9ZS59Y",
+      "orderIndex": 7,
+      "createdAt": "2026-07-28T02:39:37.399Z"
+    },
+    {
+      "id": 8,
+      "title": "Certificate of Participation – Harvard HSIL Hackathon",
+      "platform": "Brackets",
+      "imagePath": "uploads/certificates/images/fcb2dd08d85f4ddc9c8a6247939b72f2.jpg",
+      "pdfPath": null,
+      "issueDate": "2024-10-17T00:00:00.000Z",
+      "credentialUrl": null,
+      "orderIndex": 1,
+      "createdAt": "2026-08-24T02:11:09.469Z"
+    },
+    {
+      "id": 9,
+      "title": "Certificate of Participation – Cybersecurity Training Workshop",
+      "platform": "Ignite – National Technology Fund",
+      "imagePath": "uploads/certificates/images/ae42074da4094f88a13ecc577b90fbe0.jpg",
+      "pdfPath": null,
+      "issueDate": "2024-09-05T00:00:00.000Z",
+      "credentialUrl": null,
+      "orderIndex": 2,
+      "createdAt": "2026-08-24T02:15:00.575Z"
+    }
+  ],
+  "exps": [
+    {
+      "id": 1,
+      "jobTitle": "Web Development",
+      "company": "Fiverr",
+      "location": "Gujranwala ",
+      "startDate": "2023-02-07T00:00:00.000Z",
+      "endDate": null,
+      "description": "<p><em>Worked with clients across various industries to design and develop custom web applications tailored to their business needs. Built dynamic websites using Flask and Django, incorporating features like user authentication, admin panels, contact forms, and content management systems.</em></p>\r\n\r\n<p><em>Specialized in creating responsive, mobile-friendly front-ends using HTML, CSS, Bootstrap, and JavaScript. Integrated REST APIs, third-party services (like payment gateways and email notifications), and optimized websites for performance and SEO.</em></p>\r\n\r\n<p><em>Communicated directly with clients to gather requirements, deliver updates, and provide post-launch support. Focused on delivering clean, maintainable code and intuitive user experiences.</em></p>\r\n",
+      "isCurrent": true,
+      "orderIndex": 1,
+      "createdAt": "2025-08-07T03:07:51.339Z"
+    }
+  ]
+}

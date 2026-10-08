@@ -1,0 +1,4 @@
+{
+  "extends": "next/core-web-vitals",
+  "ignorePatterns": ["3d-creator-portfolio-landing-page/**"]
+}
